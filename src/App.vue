@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <animals-list :animals="animals"></animals-list>
+    <animal-detail :animal ='selectedAnimal'></animal-detail>
+    <h1> Hello </h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AnimalsList from './components/AnimalsList.vue';
+import AnimalDetail from './components/AnimalDetail.vue';
 
 export default {
   name: 'App',
+  data() {
+    return {
+   animals: [
+        {name: "snake", weight: 5},
+        {name: "dog", weight: 25},
+      ],
+      selectedAnimal: null
+    };
+  },
   components: {
-    HelloWorld
+    "animals-list": AnimalsList,
+    "animal-detail": AnimalDetail
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
