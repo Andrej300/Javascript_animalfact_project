@@ -7,6 +7,8 @@
 </template>
 
 <script>
+
+import { eventBus } from './main.js'
 import AnimalsList from './components/AnimalsList.vue';
 import AnimalDetail from './components/AnimalDetail.vue';
 
@@ -39,7 +41,14 @@ export default {
   components: {
     "animals-list": AnimalsList,
     "animal-detail": AnimalDetail
-  }
+  },
+
+
+mounted () {
+  eventBus.$on('selected-animal',(animal)=> {
+    this.selectedAnimal = animal
+  })
+}
 }
 </script>
 
