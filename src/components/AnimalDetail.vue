@@ -6,8 +6,9 @@
             <div id="flexWrapper">
             <div id="left">
             
-                <h3><span>Weight</span> {{ animal.weight }}</h3>
-                <h3><span>Group</span> {{ animal.group }}</h3>
+                <h3><span>Weight:</span> {{ animal.weight }}</h3>
+                <h3><span>Group:</span> {{ animal.group }}</h3>
+                <h3><span>Nutrition: </span>{{animal.nutrition}}</h3>
                  <ul v-for="group in animal.group"></ul>
   </div>
   <div id="right">
@@ -29,16 +30,16 @@ export default {
 #animalDetail {
     box-sizing: border-box;
     height: 400px;
-    width: 60%;
+    width: 30%;
     background: rgb(193, 31, 31);
     color: rgb(13, 14, 13);
     padding: 10px;
-    border: 1px solid rgb(59, 138, 34);
+    border: 10px solid rgb(59, 138, 34);
   }
 
   #detailWrapper {
     box-sizing: border-box;
-    background: #fff;
+    background:rgb(224, 191, 191);
     padding: 10px;
     height: 100%;
     border-radius: 3px;
@@ -46,24 +47,27 @@ export default {
 
   #flexWrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   #left, #right {
-    width: 100;
+    width: 50;
   }
 
-  #right img {
-    width: 100%;
+  #right {
+    width: 10%;
   }
 
-  #left p:first-child {
-    margin-top: 0;
+  #left {
+    margin: 50;
   }
 
   h2 {
-    margin: 10px 0 20px;
-    padding: 0;
+    margin:30px 0 20px;
+    padding: 10;
+  }
+  h3 {
+      margin: 50px 0 20px;
   }
 
   p span {

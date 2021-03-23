@@ -60,9 +60,13 @@ mounted () {
     color:blue;
   }
   .app {
+    /* background-color: black; */
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 5px;
+    
   }
+
+
 </style>

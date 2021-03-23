@@ -20,10 +20,11 @@ export default {
 
 <style lang="css" scoped>
 #animalsList {
-    background:white;
+    background:rgb(219, 98, 98);
     height: 400px;
+    width: 400px;
     overflow-y: scroll;
-    border: 1px solid rgb(242, 233, 233);
+    border: 10px solid rgb(26, 129, 12);
   }
 
   #animalsList ul {
@@ -38,7 +39,7 @@ export default {
 
   ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: rgba(222, 37, 37, 0.5);
+    background-color: rgba(66, 20, 174, 0.5);
     -webkit-box-shadow: 0 0 1px rgba(13, 132, 23, 0.5);
   }
 </style>

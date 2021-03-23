@@ -26,6 +26,7 @@ li {
     padding: 5px;
     cursor: grab;
     color: rgb(30, 25, 25);
+    font-weight: bold;
     transition: 0.1s all ease-in;
     border-radius: 3px;
   }
