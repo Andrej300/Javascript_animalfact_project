@@ -1,8 +1,10 @@
-<template>
-  <div id="app">
+<template> 
+  <div>
+   <h1> Animals </h1>
+  <div class="app">
     <animals-list :animals="animals"></animals-list>
     <animal-detail :animal ='selectedAnimal'></animal-detail>
-    <h1> Hello </h1>
+   </div>
   </div>
 </template>
 
@@ -52,8 +54,15 @@ mounted () {
 }
 </script>
 
-<style>
-#app {
-
-}
+<style lang="css" scoped>
+  h1 {
+    text-align: center;
+    color:blue;
+  }
+  .app {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
 </style>
