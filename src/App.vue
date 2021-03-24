@@ -1,4 +1,4 @@
-<template> 
+<template lang ="html">
   <div>
    <h1> Animals </h1>
   <div class="app">
@@ -47,26 +47,43 @@ export default {
 
 
 mounted () {
-  eventBus.$on('selected-animal',(animal)=> {
+  // fetch('https://dog.ceo/api/breeds/image/random')
+  //   .then(res => res.json())
+  //   .then(animals => this.animals = animals)
+    
+    eventBus.$on('selected-animal',(animal)=> {
     this.selectedAnimal = animal
+   
   })
 }
-}
-</script>
 
+
+}
+
+</script>
+ 
 <style lang="css" scoped>
   h1 {
     text-align: center;
-    color:blue;
+    color:rgb(1, 1, 10);
+    background-color:rgb(182, 106, 106);
+    padding:15px;
+    border:10px solid green;
+    border-radius:3px;
   }
   .app {
-    /* background-color: black; */
+    background-color: rgb(216, 195, 168);
+    padding:1px;
+    /* border: 10px solid rgb(223, 147, 147); */
+    border-radius:1px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin: 5px;
+    margin: -6px;
+  
     
   }
+ 
 
 
 </style>

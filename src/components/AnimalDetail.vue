@@ -35,6 +35,8 @@ export default {
     color: rgb(13, 14, 13);
     padding: 10px;
     border: 10px solid rgb(59, 138, 34);
+    border-radius: 10px;
+    margin:20px
   }
 
   #detailWrapper {

@@ -25,6 +25,8 @@ export default {
     width: 400px;
     overflow-y: scroll;
     border: 10px solid rgb(26, 129, 12);
+    border-radius: 10px;
+    margin: 20px;
   }
 
   #animalsList ul {
