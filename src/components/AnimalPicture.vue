@@ -19,8 +19,8 @@ export default {
 
 #dogs {
     
-    height: 200px;
-    width: 50%;
+    
+    width: 20vw;
     display: flex;
     justify-content: space-between;
     
