@@ -9,7 +9,6 @@
                 <h3><span>Weight:</span> {{ animal.weight }}</h3>
                 <h3><span>Group:</span> {{ animal.group }}</h3>
                 <h3><span>Nutrition:</span>{{animal.nutrition}}</h3>
-                <!-- <h3>{{picture.message}}</h3> -->
                 
   </div>
   <div id="right">
