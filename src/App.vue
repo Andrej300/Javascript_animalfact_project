@@ -4,6 +4,7 @@
   <div class="app">
     <animals-list :animals="animals"></animals-list>
     <animal-detail :animal ='selectedAnimal'></animal-detail>
+    <animal-picture :dogpic ='dogpic'></animal-picture>
    </div>
   </div>
 </template>
@@ -13,6 +14,7 @@
 import { eventBus } from './main.js'
 import AnimalsList from './components/AnimalsList.vue';
 import AnimalDetail from './components/AnimalDetail.vue';
+import AnimalPicture from './components/AnimalPicture.vue';
 
 export default {
   name: 'App',
@@ -37,31 +39,36 @@ export default {
         {name:'Horse',weight:550, group:'Mammal', nutrition: 'Herbivorous'}
         
       ],
-      selectedAnimal: null
+      selectedAnimal: null,
+      dogpic: null, 
     };
   },
   components: {
     "animals-list": AnimalsList,
-    "animal-detail": AnimalDetail
+    "animal-detail": AnimalDetail,
+    "animal-picture": AnimalPicture
   },
 
 
 mounted () {
-  // fetch('https://dog.ceo/api/breeds/image/random')
-  //   .then(res => res.json())
-  //   .then(animals => this.animals = animals)
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(res => res.json())
+    .then(dogpic => this.dogpic = dogpic.message)
     
     eventBus.$on('selected-animal',(animal)=> {
     this.selectedAnimal = animal
-   
-  })
-}
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then(res => res.json())
+    .then(dogpic => this.dogpic = dogpic.message)
 
-
-}
-
-</script>
  
+    })
+
+}
+}
+</script>
+
+
 <style lang="css" scoped>
   h1 {
     text-align: center;

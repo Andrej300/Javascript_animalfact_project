@@ -11,6 +11,7 @@ export default {
     methods: {
         handleClick: function() {
             eventBus.$emit('selected-animal', this.animal);
+            
         }
     }
 }
